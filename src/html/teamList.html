@@ -1,0 +1,5 @@
+<ul class="nav nav-sidebar">
+  <li class="team-list__team" ng-repeat="team in $ctrl.teams | orderBy:'team.City'" ng-click="$ctrl.viewTeam(team.team.ID)" ng-style="{'border-left': '5px solid ' + team.color}">
+    <div>{{team.team.City}} {{team.team.Name}}</div>
+  </li>
+</ul>

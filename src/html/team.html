@@ -1,0 +1,61 @@
+
+
+<div class="team_stats container-fluid" ng-style="{'border-left': '8px solid ' + $ctrl.team.color}">
+    <div class="team_city">{{$ctrl.team.team.City}}</div>
+<div class="team_name" ng-style="{color: $ctrl.team.color}">{{$ctrl.team.team.Name}}</div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 class="stat-header">Team Stats (2016-2017 season)</h4>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xs-6">
+            <div class="team_stats-label">Rank: </div>
+            <div class="team_stats-value">{{$ctrl.team.rank}}</div>
+        
+            <div class="team_stats-label">Wins: </div>
+            <div class="team_stats-value">{{$ctrl.team.stats.Wins['#text']}}</div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xs-6">
+            <div class="team_stats-label">Losses: </div>
+            <div class="team_stats-value">{{$ctrl.team.stats.Losses['#text']}}</div>
+
+            <div class="team_stats-label">PPG: </div>
+            <div class="team_stats-value">{{$ctrl.team.stats.PtsPerGame['#text']}}</div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xs-6">
+            <div class="team_stats-label">APG: </div>
+            <div class="team_stats-value">{{$ctrl.team.stats.AstPerGame['#text']}}</div>
+
+            <div class="team_stats-label">RPG: </div>
+            <div class="team_stats-value">{{$ctrl.team.stats.RebPerGame['#text']}}</div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xs-6">
+            <div class="team_stats-label">Blk Per Game: </div>
+            <div class="team_stats-value">{{$ctrl.team.stats.BlkPerGame['#text']}}</div>
+
+            <div class="team_stats-label">Tov Per Game: </div>
+            <div class="team_stats-value">{{$ctrl.team.stats.TovPerGame['#text']}}</div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xs-6">
+            <div class="team_stats-label">Stl Per Game: </div>
+            <div class="team_stats-value">{{$ctrl.team.stats.StlPerGame['#text']}}</div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 class="stat-header">Roster</h4>
+        </div>
+        <div class="col-xs-12">
+            <ul class="roster">
+                <li class="player" ng-repeat="player in $ctrl.roster | orderBy: 'player.FirstName'" >
+                    <span ng-click="$ctrl.viewPlayer(player.player.ID)">{{player.player.FirstName}} {{player.player.LastName}} #{{player.player.JerseyNumber}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<ui-view></ui-view>

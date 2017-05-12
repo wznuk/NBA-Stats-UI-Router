@@ -1,0 +1,23 @@
+<div class="modal fade in" tabindex="-1" role="dialog" style="display: block">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" ng-style="{'border-bottom': '2px solid ' + $ctrl.team.color}">
+        <button type="button" class="close" ng-click="$ctrl.closeModal()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{{$ctrl.player.player.FirstName}} {{$ctrl.player.player.LastName}} #{{$ctrl.player.player.JerseyNumber}}</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs">
+            <li ng-class="{'active' : !$ctrl.viewExtendedStats}" ng-click="$ctrl.viewBasic()"><a data-toggle="tab" aria-expanded="true">Basic Profile</a></li>
+            <li ng-class="{'active' : $ctrl.viewExtendedStats}" ng-click="$ctrl.viewExtended()"><a data-toggle="tab" aria-expanded="false">Extended Stats</a></li>
+        </ul>
+        <ui-view></ui-view>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="$ctrl.closeModal()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal-backdrop fade in"></div>
+

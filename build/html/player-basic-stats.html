@@ -1,0 +1,33 @@
+<div class="row basic-stats">
+    <div class="col-xs-3">
+        <div class="team_stats-label">Position</div>
+        <div class="team_stats-value">{{$ctrl.player.player.Position}}</div>
+
+        <div class="team_stats-label">Games Played</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.GamesPlayed['#text']}}</div>
+    </div>
+
+    <div class="col-xs-3">
+        <div class="team_stats-label">Field Goal Pct</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.FgPct['#text']}}</div>
+
+        <div class="team_stats-label">3pt Pct</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.Fg3PtPct['#text']}}</div>
+    </div>
+
+    <div class="col-xs-3">
+        <div class="team_stats-label">Free Throw Pct</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.FtPct['#text']}}</div>
+
+        <div class="team_stats-label">Reb Per Game</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.RebPerGame['#text']}}</div>
+    </div>
+
+    <div class="col-xs-3">
+        <div class="team_stats-label">Assists Per Game</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.AstPerGame['#text']}}</div>
+
+        <div class="team_stats-label">Points Per Game</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.PtsPerGame['#text']}}</div>
+    </div>
+</div>

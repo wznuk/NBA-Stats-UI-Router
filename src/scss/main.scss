@@ -1,0 +1,100 @@
+body {
+    font-size: 16px;
+}
+
+.team-list__team {
+    height: 5rem;
+    padding: 1.8rem;
+    border: 1px solid #d6d6d6;
+    border-bottom: none;
+    border-left: 4px red solid;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+
+.team_city {
+    font-size: 3rem;
+    margin-bottom: -2rem;
+}
+
+.team_name {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.team_stats {
+    background: #efefef;
+    padding: 2rem;
+}
+
+.team_stats-value {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.team_stats-label {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.stat-header {
+    padding: 2rem 0;
+}
+
+ul.roster {
+    -webkit-margin-before: 0em;
+    -webkit-padding-start: 0;
+    column-count: 3;
+    li.player {
+        list-style: none;
+        color: #2780e3;
+        span {
+            cursor: pointer;
+        }
+    }
+}
+
+.basic-stats {
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.select-team-message {
+    margin: auto;
+    text-align: center;
+    color: #929292;
+    font-size: 2rem;
+    margin-top: 10%;
+}
+
+.info-box {
+    font-size: 1.4rem;
+    width: 30%;
+    margin: auto;
+    position: fixed;
+    right: 10;
+    bottom: 10;
+    min-width: 400px;
+    padding: 2rem;
+    border: 1px solid #d6d6d6;
+    background: rgb(245, 238, 188);
+    color: #444;
+    text-align: left;
+    border-radius: 1rem;
+    z-index: 9999;
+    .info-box__close {
+        position: absolute;
+        right: 10;
+        top: 0px;
+        padding: .5rem;
+        cursor: pointer;
+    }
+}
+
+.code-block {
+    font-family: courier;
+    font-size: 1.2rem;
+    border: 1px solid #d6d6d6;
+    background: #f5f2e2;
+}

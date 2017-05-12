@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-3 sidebar">
+            <team-list></team-list>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-9">
+            <ui-view></ui-view>
+            <div class="select-team-message" ng-if="$ctrl.state.current.name === 'stats'">
+                Select a team from the list on the left to view this stats.
+            </div>
+
+            <div class="info-box" ng-if="$ctrl.state.current.name === 'stats' && $ctrl.showInfoBox">
+                <div class="info-box__close" ng-click="$ctrl.closeInfoBox()">x</div>
+                This is the 'stats' state. We set this up as the default state by assigning it the URL '/' and making sure that it did not have any parent states. Additionally, we used <span class="code-block">$urlRouterProvider.otherwise('/');</span> to make sure we are directed to this state if the URL does not match the URL of any other state.
+            </div>
+
+            <div class="info-box" ng-if="$ctrl.state.current.name === 'stats.team' && $ctrl.showInfoBox">
+                <div class="info-box__close" ng-click="$ctrl.closeInfoBox()">x</div>
+                This is the 'stats.team' state. This is a child state of the 'stats' state. 
+            </div>
+
+            <div class="info-box" ng-if="$ctrl.state.current.name === 'stats.team.player.basic-stats' && $ctrl.showInfoBox">
+                <div class="info-box__close" ng-click="$ctrl.closeInfoBox()">x</div>
+                This is the 'stats.team.player.basic-stats' state. This is a child of the 'player' state and a great-grandchild of the 'stats' state. Notice, that we never navigated to the 'player' state. This is because the 'player' state is abstract (<span class="code-block">abstract: true</span>). An abstract state cannot be navigated to on it's own, but you can navigate to it's children.
+            </div>
+
+            <div class="info-box" ng-if="$ctrl.state.current.name === 'stats.team.player.extended-stats' && $ctrl.showInfoBox">
+                <div class="info-box__close" ng-click="$ctrl.closeInfoBox()">x</div>
+                This is the 'stats.team.player.extended-stats' state. This is also a child of the 'player' state. <br><br> Note that a child state is able to inherit the resolved bindings from it's parent state.' For example, the 'stats.team' state resolves a variable called "team" that contains related team information, including the team's primary color. The 'stats.team.player' state takes advantage of this variable and uses it to dynamically color the line seen in the modal above.
+            </div>
+            
+        </div>
+    </div>
+</div>

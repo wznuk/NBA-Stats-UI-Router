@@ -1,0 +1,49 @@
+<div class="row basic-stats">
+    <div class="col-xs-4">
+        <div class="team_stats-label">Total Field Goals</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.FgMade['#text']}}/{{$ctrl.player.stats.FgAtt['#text']}}</div>
+
+        <div class="team_stats-label">2pt Field Goals</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.Fg2PtMade['#text']}}/{{$ctrl.player.stats.Fg2PtAtt['#text']}}</div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="team_stats-label">3pt Field Goals</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.Fg3PtMade['#text']}}/{{$ctrl.player.stats.Fg3PtAtt['#text']}}</div>
+
+        <div class="team_stats-label">Free Throws</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.FtMade['#text']}}/{{$ctrl.player.stats.FtAtt['#text']}}</div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="team_stats-label">Off. Rebs</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.OffReb['#text']}}</div>
+
+        <div class="team_stats-label">Def. Rebs</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.DefReb['#text']}}</div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="team_stats-label">Assists</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.AstPerGame['#text']}}</div>
+
+        <div class="team_stats-label">Steals</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.Stl['#text']}}</div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="team_stats-label">Blocks</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.Blk['#text']}}</div>
+
+        <div class="team_stats-label">Turnovers</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.Tov['#text']}}</div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="team_stats-label">Fouls</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.Fouls['#text']}}</div>
+
+        <div class="team_stats-label">Tech Fouls</div>
+        <div class="team_stats-value">{{$ctrl.player.stats.FoulTech['#text']}}</div>
+    </div>
+</div>
