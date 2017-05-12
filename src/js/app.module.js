@@ -9,7 +9,6 @@
     ]);
 
     angular.module('ui-router-demo').config(config);
-    // angular.module('ui-router-demo').run(run);
 
     angular.module('ui-router-demo.factories', []);
     angular.module('ui-router-demo.services', []);
