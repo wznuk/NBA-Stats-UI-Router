@@ -7,12 +7,14 @@
         ctrl.state = $state;
         ctrl.showInfoBox = true;
 
+        // used for showing the info-box
         $scope.$watch(function(){
             return $state.$current.name
         }, function(newVal, oldVal){
             ctrl.showInfoBox = true;
         }) 
 
+        // used for closing the info-box
         ctrl.closeInfoBox = function() {
             ctrl.showInfoBox = false;
         }
