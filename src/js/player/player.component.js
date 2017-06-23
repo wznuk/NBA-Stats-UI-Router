@@ -8,7 +8,7 @@
 
         console.log(ctrl.team.color);
 
-        if($state.current.name.includes('extended-stats')) {
+        if($state.current.name.indexOf('extended-stats')) {
             ctrl.viewExtendedStats = true;
         }
         ctrl.closeModal = function() {

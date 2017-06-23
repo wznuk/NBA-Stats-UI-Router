@@ -6,7 +6,7 @@ function config($stateProvider, $urlRouterProvider) {
     var states = [
         {
             name: 'stats',
-            url: '/',
+            url: '/stats/',
             component: 'stats'
         },
         {
@@ -55,7 +55,7 @@ function config($stateProvider, $urlRouterProvider) {
         $stateProvider.state(state);
     })
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/stats/');
 }
 
 config.$inject=['$stateProvider', '$urlRouterProvider'];
